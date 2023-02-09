@@ -4,10 +4,13 @@
 
 const mongoose = require('mongoose');
 const crypto = require('crypto');
+require('dotenv').config();
 
 //connect to the mongodb atlas
+const username = process.env.USER_NAME;
+const password = process.env.PASSWORD;
 mongoose.connect(
-    'mongodb+srv://eli:ec.123456@cluster0.tqy14c2.mongodb.net/server_side_project?retryWrites=true&w=majority',
+    `mongodb+srv://${username}:${password}@cluster0.tqy14c2.mongodb.net/server_side_project?retryWrites=true&w=majority`,
     { useNewUrlParser: true, useUnifiedTopology: true }
 );
 
