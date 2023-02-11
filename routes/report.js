@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
     try {
         const {user_id, month, year} = req.query;
         let report = await functions.CreateReport(user_id,month,year);
-        res.status(200).json( {report});
+        res.status(200).json(report);
     } catch (error) {
         res.status(500).send(error)
     }

@@ -4,6 +4,7 @@
 
 const mongoose = require('mongoose');
 const crypto = require('crypto');
+const {json} = require("express");
 require('dotenv').config();
 
 //connect to the mongodb atlas
@@ -159,7 +160,7 @@ const CreateReport = async (user_id, month, year) => {
         //check if the requested report already exists and returning it
         let existingReport = await Report.findOne({ user_id: user_id, year: year, month: month});
         if (existingReport) {
-            resolve(existingReport.report);
+            resolve(existingReport['report']);
             return;
         }
 
