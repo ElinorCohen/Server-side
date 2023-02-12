@@ -106,8 +106,8 @@ const AddCost = async (user_id, year, month, day, description, category, sum) =>
         //validate the date parameters
         let currDate = new Date();
         let updated_year = year || currDate.getFullYear();
-        let updated_month = month || currDate.getDate();
-        let updated_day = day || currDate.getMonth() + 1;
+        let updated_month = month || currDate.getMonth() + 1;
+        let updated_day = day || currDate.getDate();
 
         let dayValid = await DayIsValid(updated_day);
         let monthValid = await MonthIsValid(updated_month);
