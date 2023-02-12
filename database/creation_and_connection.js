@@ -36,7 +36,7 @@ const costSchema = new Schema({
     year: { type: Number, required: false },
     month: { type: Number, required: false },
     day: { type: Number, required: false },
-    id: {type: String, index: true, required: true, unique: true, default: crypto.createHash('sha256').update(Math.random().toString() + Date.now().toString()).digest('hex')},
+    id: {type: Schema.Types.ObjectId, auto: true},
     description: { type: String, required: true },
     category: { type: String, required: true, enum: ['food', 'health', 'housing', 'sport', 'education', 'transportation', 'other'] },
     sum: { type: Number, required: true }
