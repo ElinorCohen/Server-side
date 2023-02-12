@@ -104,14 +104,15 @@ const AddCost = async (user_id, year, month, day, description, category, sum) =>
         }
 
         //validate the date parameters
-        let updated_year = year || new Date().getFullYear();
-        let updated_month = month || new Date().getMonth();
-        let updated_day = day || new Date().getDay();
+        let currDate = new Date();
+        let updated_year = year || currDate.getFullYear();
+        let updated_month = month || currDate.getDate();
+        let updated_day = day || currDate.getMonth() + 1;
 
-        let DayValid = await DayIsValid(updated_day);
-        let MonthValid = await MonthIsValid(updated_month);
-        let YearValid = await YearIsValid(updated_year);
-        if (!DayValid || !MonthValid || !YearValid) {
+        let dayValid = await DayIsValid(updated_day);
+        let monthValid = await MonthIsValid(updated_month);
+        let yearValid = await YearIsValid(updated_year);
+        if (!dayValid || !monthValid || !yearValid) {
             return reject('one or more parameters are invalid');
         }
 
