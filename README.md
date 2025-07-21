@@ -118,6 +118,7 @@ npm install
 | POST   | `/addcost` | Add a new cost record          |
 | GET    | `/report`  | Generate or retrieve report    |
 
+---
 
 ### 📌 Example: `POST /addcost`
 ```json
@@ -133,6 +134,7 @@ npm install
 ```
 > Tools like Postman can execute it
 
+---
 
 ### 📌 Example: `GET /report`
 **Endpoint:**
