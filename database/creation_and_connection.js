@@ -1,7 +1,3 @@
-// Daniel Semerjian - 318004504
-// Shay Solomon - 209088442
-// Elinor Cohen - 322624453
-
 const mongoose = require('mongoose');
 const crypto = require('crypto');
 const {json} = require("express");
