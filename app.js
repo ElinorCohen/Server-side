@@ -1,7 +1,3 @@
-// Daniel Semerjian - 318004504
-// Shay Solomon - 209088442
-// Elinor Cohen - 322624453
-
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');
