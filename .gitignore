@@ -1,2 +1,23 @@
-node_modules
+# Node modules
+node_modules/
+
+# IDE settings
+.idea/
+.vscode/
+
+# Environment files
+.env
+
+# Logs
+*.log
+logs/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Optional build or temp folders
+dist/
+build/
+temp/
 /.env
